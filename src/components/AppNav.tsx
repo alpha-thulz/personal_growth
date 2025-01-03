@@ -2,7 +2,7 @@ import {Link} from "react-router";
 
 export function AppNav() {
     return (
-        <nav className="navbar navbar-expand-sm bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div className="container-fluid">
                 <span className="navbar-brand mb-0 h1">WEDELA</span>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
