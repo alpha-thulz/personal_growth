@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import client from "../utils/connect.ts";
 import Spinner from "../components/Spinner.tsx";
 import BasicTable from "../components/BasicTable.tsx";
-import dateFormat from "dateformat";
 import Button from "../components/Button.tsx";
 
 export default function Home() {
@@ -30,12 +29,12 @@ export default function Home() {
                     <div className="container-fluid">
                         <BasicTable headings={["Name", "Description", "Create at", "Updated at", "Language"]}>
                             {data?.map((item: {id: number, name:string, html_url:string, description: string, created_at:string, updated_at:string, language:string}) => (
-                                <tr key={item.id}>
-                                    <td>{item.name}</td>
-                                    <td>{item.description}</td>
-                                    <td>{dateFormat(item.created_at, "HH:MM:ss ' - ' dd mmmm yyyy")}</td>
-                                    <td>{dateFormat(item.updated_at, "HH:MM:ss ' - ' dd mmmm yyyy")}</td>
-                                    <td>{item.language}</td>
+                                <tr key={ item.id }>
+                                    <td>{ item.name }</td>
+                                    <td>{ item.description }</td>
+                                    <td>{ new Date(item.created_at).toLocaleString() }</td>
+                                    <td>{ new Date(item.updated_at).toLocaleString() }</td>
+                                    <td>{ item.language }</td>
                                     <td><Button label="View repo" onClick={() => window.open(item.html_url, "_blank")} /></td>
                                 </tr>
                             ))}
