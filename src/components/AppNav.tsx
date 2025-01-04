@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 export function AppNav() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark" >
             <Container>
                 <Navbar.Brand>WEDELA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
