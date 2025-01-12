@@ -36,7 +36,9 @@ export default function Home() {
                         {data?.map((item: {id: number, name:string, html_url:string, description: string, created_at:string, updated_at:string, language:string}) => (
                             <div className="card text-bg-dark text-center" style={{margin:5}}>
                                 <div className="card-header">
-                                    {item.name} | {item.language}
+                                    <h5>{item.name}</h5>
+                                    <hr/>
+                                    <blockquote className="blockquote-footer">{item.language}</blockquote>
                                 </div>
                                 <div className="card-body">
                                     <p>{item.description}</p>
