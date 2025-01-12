@@ -38,6 +38,12 @@ export default function About() {
                 <p>
                     I know all this time all I have been saying is <strong>"I"</strong>, however I am open to contributions and change the "I" to we or team
                 </p>
+                <ListGroup className="mb-3">
+                    <li className={"list-group-item"} onClick={() => (window.open("https://istqb.patshala.com/tests/", "_blank"))}>Practise QA</li>
+                    <li className={"list-group-item"} onClick={() => (window.open("https://tryqa.com/istqb-dumps-download-mock-tests-and-sample-question-papers/", "_blank"))}>
+                        Download mock tests and sample-question paper
+                    </li>
+                </ListGroup>
             </div>
         </div>
     );
